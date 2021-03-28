@@ -14,7 +14,7 @@ describe('Given a created book', () => {
             name: faker.words(2),
             author: "Mayumi Tamura"
         };
-        createdBook = (await axios.post(BASE_URL, new_book)).data;
+        createdBook = (await axios.post(`${BASE_URL}/`, new_book)).data;
     });
 
     describe('When the user updates the book', () => {
