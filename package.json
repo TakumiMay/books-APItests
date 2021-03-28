@@ -4,7 +4,7 @@
   "description": "Software Quality Evaluation Techniques. 2nd Homework E2E Tests.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.spec.js",
+    "test": "mocha e2e/**/*.spec.js",
     "dev": "nodemon --exec babel-node src/index.js",
     "start": "npm run build && node ./build/index.js",
     "build": "npm run clean && npm run build-babel",
