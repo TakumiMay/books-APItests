@@ -1,0 +1,33 @@
+{
+  "name": "books-apitests",
+  "version": "1.0.0",
+  "description": "Software Quality Evaluation Techniques. 2nd Homework E2E Tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.spec.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "npm run build && node ./build/index.js",
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel -d ./build ./src -s",
+    "clean": "rm -rf build && mkdir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TakumiMay/books-APItests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.13",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.12",
+    "chai": "^4.3.4",
+    "faker": "^5.5.1",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7"
+  }
+}
